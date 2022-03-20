@@ -528,6 +528,10 @@ $blue-700: hsl(229, 99%, 64%);
       width: 90%;
     }
   }
+  .testimonials {
+    &__card {
+    }
+  }
 }
 
 @media screen and (max-width: 769px) {
@@ -645,19 +649,29 @@ $blue-700: hsl(229, 99%, 64%);
   .select-country,
   .select-country-2 {
     &__container {
+      padding: 3.5rem 0;
       width: 90%;
       margin: 0 5%;
     }
     &__card {
       width: 100%;
+      padding: 3.5rem;
+
       &__button {
         padding: 2rem 2rem;
       }
     }
   }
   .testimonials {
+    &__container {
+      padding: 3.5rem 0;
+    }
+    &__card {
+      padding: 2rem;
+    }
     &__title {
       font-size: 2.7rem;
+      margin-bottom: 5rem;
     }
   }
 }
