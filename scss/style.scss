@@ -1,0 +1,663 @@
+@use "fonts";
+@use "reset";
+
+$white: hsl(0, 0%, 100%);
+$orange: hsl(0, 100%, 69%);
+$gray-300: hsl(0, 0%, 91%); //#e8e8e8
+$gray-500: hsl(0, 0%, 60%);
+$gray-600: hsl(0, 0%, 20%);
+$gray-700: hsl(0, 0%, 14%);
+$blue-300: hsl(202, 100%, 50%);
+$blue-500: hsl(229, 98%, 66%);
+$blue-700: hsl(229, 99%, 64%);
+
+%inner-centered {
+  width: 62%;
+  margin: 0 19%;
+}
+
+%button {
+  background: $blue-500;
+  background: linear-gradient(40deg, $blue-500 45%, $blue-700 45%);
+}
+// main {
+//   margin: 1.3rem;
+// }
+
+//* ============================ Banner-Section =============================================
+
+.banner-section {
+  background-image: url(../assets/images/banner-image.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: inherit;
+  padding: 18rem 0;
+  &__container {
+    width: 50%;
+    margin: 0 25%;
+    text-align: center;
+  }
+  &__title {
+    font-family: fonts.$font-josefin;
+    text-transform: uppercase;
+    color: $white;
+    font-size: 4.8rem;
+    line-height: 2.6rem;
+    font-weight: 700;
+    letter-spacing: 0.5rem;
+    margin-bottom: 1.1rem;
+  }
+  &__sub-heading {
+    font-family: fonts.$font-josefin;
+    font-size: 2.2rem;
+    line-height: 2.6rem;
+    letter-spacing: 0.7rem;
+    color: $white;
+    margin-bottom: 4.8rem;
+  }
+  &__search-bar {
+    margin-bottom: 18rem;
+
+    display: flex;
+    justify-content: center;
+    font-family: fonts.$font-aleo;
+
+    input {
+      font-size: 1.4rem;
+      line-height: 2.6rem;
+      letter-spacing: 0.28rem;
+      color: $gray-500;
+      width: 50%;
+      border: 3px solid $white;
+      border-right: none;
+      outline: none;
+      padding: 1.7rem 5rem;
+    }
+    button {
+      display: flex;
+      align-items: center;
+      font-size: 1.4rem;
+      line-height: 2.6rem;
+      letter-spacing: 0.14rem;
+      color: $white;
+      background-color: $blue-500;
+      border: 2px solid $white;
+      gap: 1.5rem;
+      text-transform: uppercase;
+      transition: all 0.5s ease-in-out;
+      padding: 1.8rem 3rem;
+      &:hover {
+        background-color: $blue-700;
+      }
+    }
+  }
+
+  &__scroll-down {
+    color: $white;
+    font-family: fonts.$font-josefin;
+    font-size: 1.4rem;
+    line-height: 2.6rem;
+    letter-spacing: 0.3rem;
+    position: relative;
+    span {
+      position: absolute;
+      top: 3rem;
+      left: 50%;
+      width: 17px;
+      height: 17px;
+      margin-left: -12px;
+      border-left: 2px solid #fff;
+      border-bottom: 2px solid #fff;
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      box-sizing: border-box;
+      &:hover {
+        color: $gray-600;
+      }
+    }
+  }
+}
+
+//* ================================== Header Section =====================================
+.header {
+  background-color: $blue-500;
+  padding: 2.6rem 0;
+  text-transform: uppercase;
+  &__container {
+    @extend %inner-centered;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__logo {
+    font-size: 1.3rem;
+    font-family: fonts.$font-josefin;
+    font-size: 2.4rem;
+    line-height: 2.6rem;
+    letter-spacing: 0.24rem;
+    font-weight: 700;
+    color: $white;
+    transition: all 0.5s ease-in-out;
+    &:hover {
+      color: $gray-500;
+    }
+  }
+  &__main-nav {
+    &__list {
+      display: flex;
+      gap: 1.5rem;
+    }
+    &__item {
+      font-family: fonts.$font-aleo;
+      font-size: 1.4rem;
+      line-height: 2.6rem;
+    }
+    &__link {
+      color: $white;
+      transition: all 0.5s ease-in-out;
+      &:hover {
+        color: $gray-500;
+      }
+    }
+  }
+}
+
+//* ================================== Why Us =============================================
+.why-us {
+  background-image: url(../assets/images/why-us.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 13rem 0;
+  &__container {
+    @extend %inner-centered;
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+  }
+
+  &__txt {
+    width: 50%;
+    &__title {
+      color: $white;
+      font-family: fonts.$font-aleo;
+      font-size: 3.6rem;
+      line-height: 2.6rem;
+      margin-bottom: 5rem;
+    }
+    p {
+      font-family: fonts.$font-josefin;
+      font-size: 1.6rem;
+      line-height: 2.6rem;
+      letter-spacing: 0.16rem;
+      color: $gray-300;
+      margin-bottom: 4.5rem;
+      &:first-child {
+        margin-bottom: 1rem;
+      }
+    }
+    &__button {
+      text-transform: uppercase;
+      color: $white;
+      font-family: fonts.$font-aleo;
+      font-size: 1.6rem;
+      line-height: 2.6rem;
+      letter-spacing: 0.12rem;
+      @extend %button;
+      transition: all 0.5s ease-in;
+      &:hover {
+        color: $gray-300;
+      }
+      padding: 2rem 4rem;
+    }
+  }
+  &__img {
+    width: 50%;
+    div {
+      &:first-child {
+        margin-bottom: 1.5rem;
+      }
+      &:last-child {
+        padding-left: 6rem;
+      }
+    }
+  }
+}
+
+//* ================================== How it Works =======================================
+
+.how-it-works {
+  background-color: $gray-700;
+  padding: 8rem 0;
+  &--container {
+    width: 70%;
+    margin: 0 15%;
+  }
+  &__list {
+    display: flex;
+    justify-content: center;
+    gap: 15rem;
+  }
+  &__item {
+    font-family: fonts.$font-aleo;
+    font-size: 2.6rem;
+    line-height: 2.6rem;
+    color: $white;
+    text-align: center;
+
+    i {
+      font-size: 4rem;
+      color: $blue-500;
+      margin-bottom: 4rem;
+    }
+    &:nth-child(2) {
+      i {
+        color: $orange;
+      }
+    }
+    &:nth-child(3) {
+      i {
+        color: $blue-300;
+      }
+    }
+  }
+}
+//* ================================== Select Country =====================================
+
+.select-country {
+  background-image: url(../assets/images/section-1.png);
+  background-size: cover;
+  &__container {
+    @extend %inner-centered;
+    display: flex;
+    justify-content: flex-start;
+    padding: 10rem 0;
+  }
+
+  &__card {
+    padding: 4rem 0.5rem 5rem 3.2rem;
+    background-color: rgba(35, 35, 35, 0.9);
+    width: 48%;
+    &__sub-title {
+      font-family: fonts.$font-josefin;
+      font-size: 2rem;
+      line-height: 2.6rem;
+      letter-spacing: 0.15rem;
+      color: $gray-300;
+      margin-bottom: 2.3rem;
+    }
+    &__title {
+      text-transform: uppercase;
+      font-family: fonts.$font-josefin;
+      font-size: 2rem;
+      line-height: 2.6rem;
+      color: $white;
+      margin-bottom: 1.3rem;
+    }
+    &__description {
+      font-family: fonts.$font-josefin;
+      color: $gray-300;
+      font-size: 1.6rem;
+      line-height: 2.6rem;
+      margin-bottom: 4.6rem;
+    }
+    &__button {
+      color: $white;
+      @extend %button;
+      font-size: 1.6rem;
+      line-height: 2.6rem;
+      letter-spacing: 0.12rem;
+      text-transform: uppercase;
+      padding: 1.5rem 3rem;
+      transition: all 0.5s ease-in-out;
+      &:hover {
+        color: $gray-500;
+      }
+    }
+  }
+}
+
+//* ================================== Select Country 2 =====================================
+.select-country-2 {
+  background-image: url(../assets/images/section-2.png);
+  background-size: cover;
+  &__container {
+    @extend %inner-centered;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10rem 0;
+  }
+
+  &__card {
+    padding: 4rem 0.5rem 5rem 3.2rem;
+    background-color: rgba(35, 35, 35, 0.9);
+    width: 48%;
+    &__sub-title {
+      font-family: fonts.$font-josefin;
+      font-size: 2rem;
+      line-height: 2.6rem;
+      letter-spacing: 0.15rem;
+      color: $gray-300;
+      margin-bottom: 2.3rem;
+    }
+    &__title {
+      text-transform: uppercase;
+      font-family: fonts.$font-josefin;
+      font-size: 2rem;
+      line-height: 2.6rem;
+      color: $white;
+      margin-bottom: 1.3rem;
+    }
+    &__description {
+      font-family: fonts.$font-josefin;
+      color: $gray-300;
+      font-size: 1.6rem;
+      line-height: 2.6rem;
+      margin-bottom: 4.6rem;
+    }
+    &__button {
+      color: $white;
+      @extend %button;
+      font-size: 1.6rem;
+      line-height: 2.6rem;
+      letter-spacing: 0.12rem;
+      text-transform: uppercase;
+      padding: 1.5rem 3rem;
+      transition: all 0.5s ease-in-out;
+      &:hover {
+        color: $gray-500;
+      }
+    }
+  }
+}
+
+//* ================================== Testimonials   =====================================
+.testimonials {
+  background-image: url(../assets/images/testimonial.png);
+  background-size: cover;
+  &__container {
+    @extend %inner-centered;
+    padding: 10rem 0;
+  }
+  &__title {
+    font-family: fonts.$font-aleo;
+    font-size: 3.6rem;
+    line-height: 2.6rem;
+    text-align: center;
+    color: $white;
+    margin-bottom: 9.1rem;
+  }
+  &__card {
+    display: flex;
+    justify-content: center;
+    &__img {
+      max-width: 40%;
+    }
+    &__txt {
+      max-width: 60%;
+      background-color: $gray-700;
+      padding: 4.9rem 2.5rem 3.9rem 5.9rem;
+      h3 {
+        font-family: fonts.$font-josefin;
+        font-size: 2rem;
+        line-height: 2.6rem;
+        margin-bottom: 0.8rem;
+        color: $white;
+      }
+      p {
+        font-family: fonts.$font-josefin;
+        color: $white;
+        font-size: 1.2rem;
+        line-height: 2.6rem;
+        i {
+          color: $blue-500;
+          font-size: 3.6rem;
+        }
+      }
+    }
+  }
+}
+
+//* ================================== Footer  ============================================
+
+.footer {
+  padding: 6rem 0;
+  background-color: $gray-700;
+  font-family: fonts.$font-josefin;
+  text-align: center;
+
+  &__container {
+    @extend %inner-centered;
+  }
+  &__title {
+    color: $white;
+    font-size: 2.4rem;
+    line-height: 2.6rem;
+    letter-spacing: 0.33rem;
+    margin-bottom: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  &__sub-heading {
+    color: $white;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    letter-spacing: 0.16rem;
+    margin-bottom: 2rem;
+  }
+  &__list {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+  &__item {
+    a {
+      font-size: 2rem;
+      line-height: 2.6rem;
+      color: $white;
+      display: inline-block;
+      transition: all 0.5s ease-in-out;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+    &:nth-child(3) {
+      a {
+        color: $blue-500;
+      }
+    }
+  }
+}
+
+//* ================================== Media Queries  =====================================
+
+@media screen and (max-width: 1024px) {
+  .header {
+    &__container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1.7rem;
+      text-align: center;
+    }
+    &__main-nav {
+      &__list {
+        gap: 3rem;
+      }
+      &__item {
+        font-size: 1.3rem;
+      }
+    }
+  }
+  .why-us {
+    padding: 5rem 0;
+    &__container {
+      display: flex;
+      flex-direction: column;
+    }
+    &__txt {
+      width: 100%;
+      &__button {
+        font-size: 1rem;
+        padding: 1.5rem 3rem;
+      }
+      &__title {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+    }
+    &__img {
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
+      width: 100%;
+      div {
+        &:last-child {
+          padding: 0;
+        }
+      }
+    }
+  }
+  .select-country,
+  .select-country-2 {
+    &__container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &__card {
+      width: 90%;
+    }
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .banner-section {
+    text-align: center;
+    &__container {
+      width: 90%;
+      margin: 0 5%;
+    }
+    &__title {
+      font-size: 3.8rem;
+    }
+    &__sub-heading {
+      letter-spacing: 0.1rem;
+    }
+    &__search-bar {
+      input {
+        padding-inline: 2rem;
+      }
+    }
+  }
+  .header {
+    text-align: center;
+    &__main-nav {
+      &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+      }
+    }
+  }
+
+  .select-country,
+  .select-country-2 {
+    &__container {
+      width: 80%;
+      margin: 0 10%;
+    }
+  }
+  .testimonials {
+    &__container {
+      width: 90%;
+      margin: 0 5%;
+    }
+
+    &__card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      &__img {
+        width: 100%;
+        max-width: 100%;
+      }
+      &__txt {
+        max-width: 100%;
+      }
+    }
+  }
+  .how-it-works {
+    &__list {
+      display: flex;
+      flex-direction: column;
+      gap: 10rem;
+    }
+    &__item {
+      i {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .banner-section {
+    text-align: center;
+    padding: 8rem 0;
+    &__container {
+      width: 90%;
+      margin: 0 5%;
+    }
+    &__title {
+      letter-spacing: 0.1rem;
+    }
+    &__sub-heading {
+      letter-spacing: 0.1rem;
+    }
+    &__search-bar {
+      margin-bottom: 10rem;
+      input {
+        padding-inline: 1.2rem;
+      }
+      button {
+        span {
+          display: none;
+        }
+      }
+    }
+  }
+  .why-us {
+    padding: 2rem 0;
+    text-align: left;
+    &__container {
+      width: 80%;
+      margin: 0 10%;
+    }
+    &__txt {
+      width: 100%;
+      margin-bottom: 1rem;
+      &__button {
+        padding: 1rem 3rem;
+      }
+    }
+  }
+  .select-country,
+  .select-country-2 {
+    &__container {
+      width: 90%;
+      margin: 0 5%;
+    }
+    &__card {
+      width: 100%;
+      &__button {
+        padding: 2rem 2rem;
+      }
+    }
+  }
+  .testimonials {
+    &__title {
+      font-size: 2.7rem;
+    }
+  }
+}
