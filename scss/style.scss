@@ -528,10 +528,6 @@ $blue-700: hsl(229, 99%, 64%);
       width: 90%;
     }
   }
-  .testimonials {
-    &__card {
-    }
-  }
 }
 
 @media screen and (max-width: 769px) {
@@ -632,7 +628,7 @@ $blue-700: hsl(229, 99%, 64%);
     }
   }
   .why-us {
-    padding: 2rem 0;
+    padding: 4rem 0;
     text-align: left;
     &__container {
       width: 80%;
